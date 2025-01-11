@@ -1,13 +1,10 @@
 {
   "name": "shared-store",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "type": "module",
-  "files": [
-    "*.js",
-    "package.json"
-  ],
+  "files": ["dist"],
   "exports": {
     ".": {
       "import": "./dist/index.js",
