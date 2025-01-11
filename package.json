@@ -1,0 +1,21 @@
+{
+  "name": "shared-store",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "homepage": "https://phuocluu1908.github.io/shared-store",
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.x",
+    "@babel/core": "^7.x",
+    "@babel/preset-env": "^7.x",
+    "gh-pages": "^6.3.0"
+  }
+}
