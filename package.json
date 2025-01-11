@@ -1,0 +1,16 @@
+{
+  "name": "shared-store",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.x",
+    "@babel/cli": "^7.x",
+    "@babel/preset-env": "^7.x"
+  }
+}
