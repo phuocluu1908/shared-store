@@ -1,8 +1,8 @@
 {
   "name": "shared-store",
   "version": "1.0.1",
-  "main": "./index.js",
-  "module": "./index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "type": "module",
   "files": [
     "*.js",
@@ -10,17 +10,17 @@
   ],
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "homepage": "https://phuocluu1908.github.io/shared-store",
   "scripts": {
-    "build": "babel src --out-dir . --extensions '.js,.jsx'",
+    "build": "babel src --out-dir dist --extensions '.js,.jsx'",
     "pack": "npm pack",
     "build-and-pack": "yarn build && yarn pack",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d ."
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0"
