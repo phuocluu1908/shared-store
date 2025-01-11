@@ -13,9 +13,8 @@
     "@reduxjs/toolkit": "^1.9.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.x",
     "@babel/core": "^7.x",
-    "@babel/preset-env": "^7.x",
-    "gh-pages": "^6.3.0"
+    "@babel/cli": "^7.x",
+    "@babel/preset-env": "^7.x"
   }
 }
