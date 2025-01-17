@@ -914,13 +914,6 @@ babel-plugin-polyfill-regenerator@^0.6.1:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.6.3"
 
-babel-plugin-transform-import-paths@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-import-paths/-/babel-plugin-transform-import-paths-1.0.3.tgz#ed26ba73e53c29af5cc3be277b73a096974cfb0a"
-  integrity sha512-scDmJ3c0VvP4eREOVqv03XoeiN6NnEc57zbM2WycyjMVG07YrJ2qWWYjP8hALoFFJaYW9AZ1T/nUnYq5SgeZOA==
-  dependencies:
-    slash "^3.0.0"
-
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"

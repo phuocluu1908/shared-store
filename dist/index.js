@@ -1,6 +1,6 @@
-import store from './store';
-import { login, logout } from './userSlice';
-import { addItem, removeItem } from './cartSlice';
+import store from './store.js';
+import { login, logout } from './userSlice.js';
+import { addItem, removeItem } from './cartSlice.js';
 
 // Export anything you want consumers to use.
 // For instance:
