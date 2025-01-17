@@ -4,7 +4,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -26,6 +28,7 @@
     "@babel/cli": "^7.x",
     "@babel/core": "^7.x",
     "@babel/preset-env": "^7.x",
+    "babel-plugin-add-module-exports": "^1.0.4",
     "gh-pages": "^6.3.0"
   }
 }

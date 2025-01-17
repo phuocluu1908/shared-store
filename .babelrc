@@ -6,5 +6,8 @@
         "modules": false // Disable module transformation to preserve ES Modules
       }
     ]
+  ],
+  "plugins": [
+    ["babel-plugin-add-module-exports", { "extension": ".js" }]
   ]
 }
