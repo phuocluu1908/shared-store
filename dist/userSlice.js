@@ -1,11 +1,5 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.logout = exports.login = exports["default"] = void 0;
-var _toolkit = require("@reduxjs/toolkit");
-var userSlice = (0, _toolkit.createSlice)({
+import { createSlice } from '@reduxjs/toolkit';
+var userSlice = createSlice({
   name: 'user',
   initialState: {
     name: 'Luu Tran',
@@ -23,6 +17,7 @@ var userSlice = (0, _toolkit.createSlice)({
   }
 });
 var _userSlice$actions = userSlice.actions,
-  login = exports.login = _userSlice$actions.login,
-  logout = exports.logout = _userSlice$actions.logout;
-var _default = exports["default"] = userSlice.reducer;
+  login = _userSlice$actions.login,
+  logout = _userSlice$actions.logout;
+export { login, logout };
+export default userSlice.reducer;

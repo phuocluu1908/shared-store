@@ -1,19 +1,12 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _toolkit = require("@reduxjs/toolkit");
-var _userSlice = _interopRequireDefault(require("./userSlice"));
-var _cartSlice = _interopRequireDefault(require("./cartSlice"));
-var _productSlice = _interopRequireDefault(require("./productSlice"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-var store = (0, _toolkit.configureStore)({
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from './userSlice';
+import cartReducer from './cartSlice';
+import productReducer from './productSlice';
+var store = configureStore({
   reducer: {
-    user: _userSlice["default"],
-    cart: _cartSlice["default"],
-    products: _productSlice["default"]
+    user: userReducer,
+    cart: cartReducer,
+    products: productReducer
   }
 });
-var _default = exports["default"] = store;
+export default store;

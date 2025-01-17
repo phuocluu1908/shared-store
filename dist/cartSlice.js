@@ -1,14 +1,8 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.removeItem = exports["default"] = exports.decreaseItemQuantity = exports.clearCart = exports.addItem = void 0;
-var _toolkit = require("@reduxjs/toolkit");
+import { createSlice } from '@reduxjs/toolkit';
 var initialState = {
   items: [] // Each item: { id, title, price, quantity }
 };
-var cartSlice = (0, _toolkit.createSlice)({
+var cartSlice = createSlice({
   name: 'cart',
   initialState: initialState,
   reducers: {
@@ -69,8 +63,9 @@ var cartSlice = (0, _toolkit.createSlice)({
   }
 });
 var _cartSlice$actions = cartSlice.actions,
-  addItem = exports.addItem = _cartSlice$actions.addItem,
-  removeItem = exports.removeItem = _cartSlice$actions.removeItem,
-  decreaseItemQuantity = exports.decreaseItemQuantity = _cartSlice$actions.decreaseItemQuantity,
-  clearCart = exports.clearCart = _cartSlice$actions.clearCart;
-var _default = exports["default"] = cartSlice.reducer;
+  addItem = _cartSlice$actions.addItem,
+  removeItem = _cartSlice$actions.removeItem,
+  decreaseItemQuantity = _cartSlice$actions.decreaseItemQuantity,
+  clearCart = _cartSlice$actions.clearCart;
+export { addItem, removeItem, decreaseItemQuantity, clearCart };
+export default cartSlice.reducer;

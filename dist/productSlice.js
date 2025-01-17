@@ -1,11 +1,5 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _toolkit = require("@reduxjs/toolkit");
 function _objectDestructuringEmpty(t) { if (null == t) throw new TypeError("Cannot destructure " + t); }
+import { createSlice } from '@reduxjs/toolkit';
 var initialState = {
   items: [{
     id: 1,
@@ -65,10 +59,11 @@ var initialState = {
     rating: 1.9
   }]
 };
-var productSlice = (0, _toolkit.createSlice)({
+var productSlice = createSlice({
   name: 'product',
   initialState: initialState,
   reducers: {}
 });
 _objectDestructuringEmpty(productSlice.actions);
-var _default = exports["default"] = productSlice.reducer;
+export {};
+export default productSlice.reducer;
