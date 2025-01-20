@@ -1,18 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 var initialState = {
-  items: [{
-    "id": 6,
-    "title": "Solid Gold Petite Micropave",
-    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-    "price": 168,
-    "quantity": 2
-  }, {
-    "id": 7,
-    "title": "White Gold Plated Princess",
-    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-    "price": 9.99,
-    "quantity": 1
-  }] // Each item: { id, title, price, quantity }
+  // items: [
+  //   {
+  //       "id": 6,
+  //       "title": "Solid Gold Petite Micropave",
+  //       "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+  //       "price": 168,
+  //       "quantity": 2
+  //   },
+  //   {
+  //       "id": 7,
+  //       "title": "White Gold Plated Princess",
+  //       "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+  //       "price": 9.99,
+  //       "quantity": 1
+  //   }
+  // ], // Each item: { id, title, price, quantity }
 };
 var cartSlice = createSlice({
   name: 'cart',
@@ -61,7 +64,6 @@ var cartSlice = createSlice({
       var idx = state.items.findIndex(function (item) {
         return item.id === id;
       });
-      console.log('id', id, idx);
       state.items[idx].quantity = quantity;
     },
     clearCart: function clearCart(state) {
