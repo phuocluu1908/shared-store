@@ -1,6 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 var initialState = {
-  items: [] // Each item: { id, title, price, quantity }
+  items: [{
+    "id": 6,
+    "title": "Solid Gold Petite Micropave",
+    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    "price": 168,
+    "quantity": 2
+  }, {
+    "id": 7,
+    "title": "White Gold Plated Princess",
+    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    "price": 9.99,
+    "quantity": 1
+  }] // Each item: { id, title, price, quantity }
 };
 var cartSlice = createSlice({
   name: 'cart',
@@ -41,21 +53,16 @@ var cartSlice = createSlice({
         return item.id !== itemId;
       });
     },
-    decreaseItemQuantity: function decreaseItemQuantity(state, action) {
-      var itemId = action.payload;
-      var existingItem = state.items.find(function (item) {
-        return item.id === itemId;
+    // },
+    updateItemQuantity: function updateItemQuantity(state, action) {
+      var _action$payload2 = action.payload,
+        id = _action$payload2.id,
+        quantity = _action$payload2.quantity;
+      var idx = state.items.findIndex(function (item) {
+        return item.id === id;
       });
-      if (existingItem) {
-        if (existingItem.quantity > 1) {
-          existingItem.quantity -= 1;
-        } else {
-          // Remove item if quantity goes to 0
-          state.items = state.items.filter(function (item) {
-            return item.id !== itemId;
-          });
-        }
-      }
+      console.log('id', id, idx);
+      state.items[idx].quantity = quantity;
     },
     clearCart: function clearCart(state) {
       state.items = [];
@@ -65,7 +72,7 @@ var cartSlice = createSlice({
 var _cartSlice$actions = cartSlice.actions,
   addItem = _cartSlice$actions.addItem,
   removeItem = _cartSlice$actions.removeItem,
-  decreaseItemQuantity = _cartSlice$actions.decreaseItemQuantity,
-  clearCart = _cartSlice$actions.clearCart;
-export { addItem, removeItem, decreaseItemQuantity, clearCart };
+  clearCart = _cartSlice$actions.clearCart,
+  updateItemQuantity = _cartSlice$actions.updateItemQuantity;
+export { addItem, removeItem, clearCart, updateItemQuantity };
 export default cartSlice.reducer;

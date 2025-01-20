@@ -16,7 +16,7 @@
   "homepage": "https://phuocluu1908.github.io/shared-store",
   "scripts": {
     "build": "babel src --out-dir dist --extensions '.js,.jsx'",
-    "pack": "npm pack",
+    "pack": "yarn pack",
     "build-and-pack": "yarn build && yarn pack",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
