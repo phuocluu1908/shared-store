@@ -54,7 +54,11 @@ const cartSlice = createSlice({
     updateItemQuantity: (state, action) => {
       const { id, quantity } = action.payload
       const idx = state.items.findIndex((item) => item.id === id);
-      state.items[idx].quantity = quantity
+      if (quantity === 0) {
+        state.items.splice(idx, 1)
+      } else {
+        state.items[idx].quantity = quantity
+      }
     },
     clearCart: (state) => {
       state.items = [];

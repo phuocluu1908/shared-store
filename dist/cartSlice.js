@@ -65,7 +65,11 @@ var cartSlice = createSlice({
       var idx = state.items.findIndex(function (item) {
         return item.id === id;
       });
-      state.items[idx].quantity = quantity;
+      if (quantity === 0) {
+        state.items.splice(idx, 1);
+      } else {
+        state.items[idx].quantity = quantity;
+      }
     },
     clearCart: function clearCart(state) {
       state.items = [];
